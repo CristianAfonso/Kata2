@@ -16,12 +16,12 @@ public class Kata2 {
             }else{ 
                 histogram.put(data[i], 1);
             }
-            Iterator ent = histogram.entrySet().iterator();
-            while (ent.hasNext()){
-                HashMap.Entry entry = (HashMap.Entry) ent.next();
-                Integer key = (Integer)entry.getKey();
-                System.out.println(key + "==>" + histogram.get(key));
-            }
+        }
+        Iterator ent = histogram.entrySet().iterator();
+        while (ent.hasNext()){
+            HashMap.Entry entry = (HashMap.Entry) ent.next();
+            Integer key = (Integer)entry.getKey();
+            System.out.println(key + "==>" + histogram.get(key));
         }
     }
     
