@@ -5,17 +5,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class Histogram {
-    private final int[] data;
-    Histogram(int[] data){
+public class Histogram<T>{
+    private final T[] data;
+    Histogram(T[] data){
     this.data = data;
     }
-    public int[] getData(){
+    public T[] getData(){
         return this.data;
     }
-    public  Map<Integer, Integer> getHistogram(){
-       HashMap <Integer, Integer> histogram = new HashMap<>();
-        for (int i: data) {
+    public  Map<T, Integer> getHistogram(){
+       HashMap <T, Integer> histogram = new HashMap<>();
+        for (T i: data) {
             histogram.put(i, histogram.containsKey(i) ? histogram.get(i) + 1 : 1);
         }
         return histogram;
